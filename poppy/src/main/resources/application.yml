@@ -10,14 +10,17 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
+  # 配置Mybatis
   datasource:
     url: jdbc:mysql://127.0.0.1/macintosh?characterEncoding=UTF-8&useUnicode=true&nullCatalogMeansCurrent=true
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-
+# 配置Mybatis
 mybatis:
   configuration:
     use-actual-param-name: true
+  # mybatis 映射文件位置
   mapper-locations: classpath:mapper/*.xml
+  # 对应实体类的包
   type-aliases-package: com.vernon.poppy.entity
