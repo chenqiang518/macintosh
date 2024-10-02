@@ -1,3 +1,23 @@
+/**
+  1、安装docker desktop客户端并启动
+  2、启动终端
+  3、从 docker hub 拉取 mysql image 镜像: docker pull mysql:lts
+  4、启动运行 mysql container 容器:
+      docker run -itd --restart always --name mysql \
+      -v $PWD/containers/mysql:/var/lib/mysql \
+      -e MYSQL_NATIVE_PASSWORD=ON \
+      -e MYSQL_ROOT_PASSWORD=root \
+      -p 3306:3306 -d mysql:lts \
+      --character-set-server=utf8mb4 \
+      --collation-server=utf8mb4_unicode_ci
+    a. -e MYSQL_NATIVE_PASSWORD=ON: mysql 版本>=8.4 需要启用mysql_native_password验证
+    b. --restart always: 自动启动 mysql 容器
+    c. --name mysql: 容器命名为 mysql
+    d. -v $PWD/containers/mysql:/var/lib/mysql: 容器文件挂载到本地以使数据持久化，$PWD/containers/mysql 为本地存储路径，/var/lib/mysql 为容器数据路径
+    e. -e MYSQL_ROOT_PASSWORD=root:设置 root 用户初始化密码为 root
+    f. -p 3306:3306 将容器端口 3306 映射到 本机端口3306
+    g. --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci: 指定 mysql 默认编码格式
+ */
 
 CREATE DATABASE IF NOT EXISTS macintosh;
 
