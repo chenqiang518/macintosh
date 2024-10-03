@@ -1,22 +1,19 @@
-package com.vernon.reaper.solution;
+package com.vernon.reaper.service;
 
+import com.vernon.reaper.service.impl.SolutionImpl;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
+class SolutionTest {
 
-class MergeTest {
-
-    public Merge merge;
-    public TwoSum twoSum;
+    public Solution solution;
 
     @BeforeEach
     void setUp() {
-        merge = new Merge();
-        twoSum = new TwoSum();
+        solution = new SolutionImpl();
     }
 
     @AfterEach
@@ -27,7 +24,7 @@ class MergeTest {
     void merge() {
         int[] nums1={1,2,3,0,0,0},nums2={2,5,6};
         int m=3,n=3;
-        merge.merge(nums1,m,nums2,n);
+        solution.merge(nums1,m,nums2,n);
         System.out.println(Arrays.toString(nums1));
     }
 
@@ -35,7 +32,7 @@ class MergeTest {
     void twoSum() {
         int[] nums1={2,7,11,15};
         int target = 9;
-        int[] index = twoSum.twoSum(nums1, target);
+        int[] index = solution.twoSum(nums1, target);
         System.out.println(Arrays.toString(index));
     }
 }

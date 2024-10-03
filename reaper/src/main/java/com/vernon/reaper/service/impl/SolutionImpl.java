@@ -1,26 +1,29 @@
-package com.vernon.reaper.solution;
+package com.vernon.reaper.service.impl;
+
+import com.vernon.reaper.service.Solution;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoSum {
+public class SolutionImpl implements Solution {
+    @Override
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        // 双指针，一个判断nums1的元素，另一个判断nums2的元素
+        int p1 = m - 1;
+        int p2 = n - 1;
+        // nums1放置元素的索引，从m+n-1倒着开始放，这样不会影响nums1前面部分的元素
+        int index = m + n -1;
+        // 遍历两个数组
+        while (p1 >= 0 && p2 >= 0) {
+            nums1[index--] = nums1[p1] <= nums2[p2] ? nums2[p2--] : nums1[p1--];
+        }
+        // 如果是nums2更长的话，把没遍历到的元素拼到最前面(nums1更长的话不用管)
+        while (p2 >= 0) {
+            nums1[index--] = nums2[p2--];
+        }
+    }
 
-    /**
-     * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
-     * 你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。
-     * 你可以按任意顺序返回答案。
-     * 示例 1：
-     * 输入：nums = [2,7,11,15], target = 9
-     * 输出：[0,1]
-     * 解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
-     * 示例 2：
-     * 输入：nums = [3,2,4], target = 6
-     * 输出：[1,2]
-     * 示例 3：
-     * 输入：nums = [3,3], target = 6
-     * 输出：[0,1]
-     * <p>
-     * 思路
+    /** 思路
      * 标签：哈希映射
      * 这道题本身如果通过暴力遍历的话也是很容易解决的，时间复杂度在 O(n2)
      * 由于哈希查找的时间复杂度为 O(1)，所以可以利用哈希容器 map 降低时间复杂度
@@ -30,6 +33,7 @@ public class TwoSum {
      * 时间复杂度：O(n)
      *
      */
+    @Override
     public int[] twoSum(int[] nums, int target) {
 
         int length = nums.length;
