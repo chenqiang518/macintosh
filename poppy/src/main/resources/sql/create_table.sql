@@ -1,8 +1,12 @@
 /**
   1、安装docker desktop客户端并启动
   2、启动终端
-  3、从 docker hub 拉取 mysql image 镜像: docker pull mysql:lts
+  3、从 docker hub 拉取 mysql image 镜像:
+    ```
+       docker pull mysql:lts
+    ```
   4、启动运行 mysql container 容器:
+    ```
       docker run -itd --restart always --name mysql \
       -v $PWD/containers/mysql:/var/lib/mysql \
       -e MYSQL_NATIVE_PASSWORD=ON \
@@ -10,6 +14,8 @@
       -p 3306:3306 -d mysql:lts \
       --character-set-server=utf8mb4 \
       --collation-server=utf8mb4_unicode_ci
+    ```
+    注释:
     a. -e MYSQL_NATIVE_PASSWORD=ON: mysql 版本>=8.4 需要启用mysql_native_password验证
     b. --restart always: 自动启动 mysql 容器
     c. --name mysql: 容器命名为 mysql
