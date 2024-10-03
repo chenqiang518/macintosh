@@ -22,4 +22,5 @@
 - 测试右移 质量监控
 ![image](https://github.com/user-attachments/assets/46f7f32b-7f13-4564-a8d1-aec051ec60d4)
 
-![image](https://github.com/user-attachments/assets/567dddbe-d02b-4560-937c-567a69c89875)
+<img width="1180" alt="截屏2024-10-03 21 26 17" src="https://github.com/user-attachments/assets/0bea1f91-54a1-4c34-8106-03bbd7b5c786">
+
