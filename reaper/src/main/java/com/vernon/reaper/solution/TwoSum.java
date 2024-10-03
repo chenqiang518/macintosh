@@ -19,7 +19,7 @@ public class TwoSum {
      * 示例 3：
      * 输入：nums = [3,3], target = 6
      * 输出：[0,1]
-     *
+     * <p>
      * 思路
      * 标签：哈希映射
      * 这道题本身如果通过暴力遍历的话也是很容易解决的，时间复杂度在 O(n2)
@@ -28,6 +28,7 @@ public class TwoSum {
      * 如果存在则找到了两个值，如果不存在则将当前的 (nums[i],i) 存入 map 中，继续遍历直到找到为止
      * 如果最终都没有结果则抛出异常
      * 时间复杂度：O(n)
+     *
      */
     public int[] twoSum(int[] nums, int target) {
 
