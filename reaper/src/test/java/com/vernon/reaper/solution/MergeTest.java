@@ -11,10 +11,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class MergeTest {
 
     public Merge merge;
+    public TwoSum twoSum;
 
     @BeforeEach
     void setUp() {
         merge = new Merge();
+        twoSum = new TwoSum();
     }
 
     @AfterEach
@@ -27,5 +29,13 @@ class MergeTest {
         int m=3,n=3;
         merge.merge(nums1,m,nums2,n);
         System.out.println(Arrays.toString(nums1));
+    }
+
+    @Test
+    void twoSum() {
+        int[] nums1={2,7,11,15};
+        int target = 9;
+        int[] index = twoSum.twoSum(nums1, target);
+        System.out.println(Arrays.toString(index));
     }
 }
