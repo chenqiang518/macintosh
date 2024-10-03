@@ -20,7 +20,7 @@
 - 测试框架 测试平台
 - 测试左移 精准测试
 - 测试右移 质量监控
-![image](https://github.com/user-attachments/assets/46f7f32b-7f13-4564-a8d1-aec051ec60d4)
+![image](https://github.com/user-attachments/assets/8adebff8-6ab3-4783-a6ac-cfcd7df2ac4a)
 
 ![image](https://github.com/user-attachments/assets/0da284de-7984-4931-9c28-1c3100230692)
 
