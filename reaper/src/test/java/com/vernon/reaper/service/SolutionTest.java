@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 class SolutionTest {
 
@@ -34,5 +36,29 @@ class SolutionTest {
         int target = 9;
         int[] index = solution.twoSum(nums1, target);
         System.out.println(Arrays.toString(index));
+    }
+
+    @Test
+    void groupAnagrams() {
+        String[] strs = {"eat","tea","tan","ate","nat","bat"};
+        List<List<String>> lists = solution.groupAnagrams(strs);
+        System.out.println(lists);
+    }
+
+    // 使用Java 8生成随机字母数字字符串
+    @Test
+    public void generatingRandomAlphanumericString() {
+        int leftLimit = 48; // numeral '0'
+        int rightLimit = 122; // letter 'z'
+        int targetStringLength = 10;
+        Random random = new Random();
+
+        String generatedString = random.ints(leftLimit, rightLimit + 1)
+                .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
+                .limit(targetStringLength)
+                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+                .toString();
+
+        System.out.println(generatedString);
     }
 }
