@@ -74,4 +74,23 @@ public class SolutionImpl implements Solution {
         return new ArrayList<List<String>>(map.values());
 
     }
+
+    @Override
+    public int longestConsecutive(int[] nums) {
+        Arrays.sort(nums);
+        int max_length = 0;
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int num: nums){
+            if(!map.containsKey(num)) {
+                int left = map.getOrDefault(num - 1, 0);
+                int right = map.getOrDefault(num + 1, 0);
+                int cur_length = 1+left+right;
+                if (cur_length > max_length) max_length=cur_length;
+                map.put(num,cur_length);
+                map.put(num-left,cur_length);
+                map.put(num+right,cur_length);
+            }
+        }
+        return max_length;
+    }
 }
