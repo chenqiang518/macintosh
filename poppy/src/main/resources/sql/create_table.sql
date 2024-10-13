@@ -19,7 +19,7 @@
     a. -e MYSQL_NATIVE_PASSWORD=ON: mysql 版本>=8.4 需要启用mysql_native_password验证
     b. --restart always: 自动启动 mysql 容器
     c. --name mysql: 容器命名为 mysql
-    d. -v $PWD/containers/mysql:/var/lib/mysql: 容器文件挂载到本地以使数据持久化，$PWD/containers/mysql 为本地存储路径，/var/lib/mysql 为容器数据路径
+    d. -v $PWD/containers/mysql:/var/lib/mysql: 容器文件挂载到本地以使数据持久化，$HOME/containers/mysql 为本地存储路径，/var/lib/mysql 为容器数据路径
     e. -e MYSQL_ROOT_PASSWORD=root:设置 root 用户初始化密码为 root
     f. -p 3306:3306 将容器端口 3306 映射到 本机端口3306
     g. --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci: 指定 mysql 默认编码格式
