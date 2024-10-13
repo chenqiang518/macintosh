@@ -1,4 +1,4 @@
-package com.vernon.reaper.service;
+package com.vernon.reaper.service.wiremock;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
