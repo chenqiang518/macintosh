@@ -93,4 +93,9 @@ public class SolutionImpl implements Solution {
         }
         return max_length;
     }
+
+    @Override
+    public void moveZeroes(int[] nums) {
+
+    }
 }
