@@ -8,7 +8,7 @@
   4、启动运行 mysql container 容器:
     ```
       docker run -itd --restart always --name mysql \
-      -v $PWD/containers/mysql:/var/lib/mysql \
+      -v $HOME/containers/mysql:/var/lib/mysql \
       -e MYSQL_NATIVE_PASSWORD=ON \
       -e MYSQL_ROOT_PASSWORD=root \
       -p 3306:3306 -d mysql:lts \
