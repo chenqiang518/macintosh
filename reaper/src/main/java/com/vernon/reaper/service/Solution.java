@@ -91,7 +91,7 @@ public interface Solution {
      * 示例 2:
      * 输入: nums = [0]
      * 输出: [0]
-     * @param nums
      */
     void moveZeroes(int[] nums);
+
 }

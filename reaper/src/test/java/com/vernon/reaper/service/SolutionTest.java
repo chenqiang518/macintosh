@@ -61,4 +61,11 @@ class SolutionTest {
 
         System.out.println(generatedString);
     }
+
+    @Test
+    void moveZeroes() {
+        int[] nums = {0,1,0,3,12};
+        solution.moveZeroes(nums);
+        System.out.println(Arrays.toString(nums));
+    }
 }
