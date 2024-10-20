@@ -68,4 +68,8 @@ class SolutionTest {
         solution.moveZeroes(nums);
         System.out.println(Arrays.toString(nums));
     }
+
+    @Test
+    void maxArea() {
+    }
 }

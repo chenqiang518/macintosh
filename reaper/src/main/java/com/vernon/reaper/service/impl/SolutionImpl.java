@@ -13,7 +13,7 @@ public class SolutionImpl implements Solution {
         int p1 = m - 1;
         int p2 = n - 1;
         // nums1放置元素的索引，从m+n-1倒着开始放，这样不会影响nums1前面部分的元素
-        int index = m + n -1;
+        int index = m + n - 1;
         // 遍历两个数组
         while (p1 >= 0 && p2 >= 0) {
             nums1[index--] = nums1[p1] <= nums2[p2] ? nums2[p2--] : nums1[p1--];
@@ -24,7 +24,8 @@ public class SolutionImpl implements Solution {
         }
     }
 
-    /** 思路
+    /**
+     * 思路
      * 标签：哈希映射
      * 这道题本身如果通过暴力遍历的话也是很容易解决的，时间复杂度在 O(n^2)
      * 由于哈希查找的时间复杂度为 O(1)，所以可以利用哈希容器 map 降低时间复杂度
@@ -32,18 +33,17 @@ public class SolutionImpl implements Solution {
      * 如果存在则找到了两个值，如果不存在则将当前的 (nums[i],i) 存入 map 中，继续遍历直到找到为止
      * 如果最终都没有结果则抛出异常
      * 时间复杂度：O(n)
-     *
      */
     @Override
     public int[] twoSum(int[] nums, int target) {
 
         int length = nums.length;
-        Map<Integer,Integer> map = new HashMap<>();
-        for (int i = 0; i < length-1; i++) {
-            if (map.containsKey(target-nums[i])){
-                return new int[] {map.get(target-nums[i]),i};
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < length - 1; i++) {
+            if (map.containsKey(target - nums[i])) {
+                return new int[]{map.get(target - nums[i]), i};
             }
-            map.put(nums[i],i);
+            map.put(nums[i], i);
         }
         throw new IllegalArgumentException("No two sum solution");
     }
@@ -62,14 +62,14 @@ public class SolutionImpl implements Solution {
                 .collect(Collectors.groupingBy(str -> str.chars().sorted()
                         .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
                         .toString())).values());*/
-        Map<String,List<String>> map = new HashMap<String,List<String>>();
-        for (String str: strs){
+        Map<String, List<String>> map = new HashMap<String, List<String>>();
+        for (String str : strs) {
             char[] chars = str.toCharArray();
             Arrays.sort(chars);
             String key = new String(chars);
             List<String> list = map.getOrDefault(key, new ArrayList<String>());
             list.add(str);
-            map.put(key,list);
+            map.put(key, list);
         }
         return new ArrayList<List<String>>(map.values());
 
@@ -79,16 +79,16 @@ public class SolutionImpl implements Solution {
     public int longestConsecutive(int[] nums) {
         Arrays.sort(nums);
         int max_length = 0;
-        Map<Integer,Integer> map = new HashMap<>();
-        for(int num: nums){
-            if(!map.containsKey(num)) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            if (!map.containsKey(num)) {
                 int left = map.getOrDefault(num - 1, 0);
                 int right = map.getOrDefault(num + 1, 0);
-                int cur_length = 1+left+right;
-                if (cur_length > max_length) max_length=cur_length;
-                map.put(num,cur_length);
-                map.put(num-left,cur_length);
-                map.put(num+right,cur_length);
+                int cur_length = 1 + left + right;
+                if (cur_length > max_length) max_length = cur_length;
+                map.put(num, cur_length);
+                map.put(num - left, cur_length);
+                map.put(num + right, cur_length);
             }
         }
         return max_length;
@@ -105,9 +105,9 @@ public class SolutionImpl implements Solution {
      */
     @Override
     public void moveZeroes(int[] nums) {
-        int left=0,right=0;
-        while (right<nums.length) {
-            if (nums[right]!=0) {
+        int left = 0, right = 0;
+        while (right < nums.length) {
+            if (nums[right] != 0) {
                 int temp = nums[left];
                 nums[left] = nums[right];
                 nums[right] = temp;
@@ -131,23 +131,47 @@ public class SolutionImpl implements Solution {
      * 这个时候，左边的柱子和任意一个其他柱子的组合，其实都可以排除了。也就是我们可以排除掉左边的柱子了。
      * 这个排除掉左边柱子的操作，就是双指针代码里的 i++。i 和 j 两个指针中间的区域都是还未排除掉的区域。
      * 随着不断的排除，i 和 j 都会往中间移动。当 i 和 j 相遇，算法就结束了。
-     *
-     *
      */
     @Override
     public int maxArea(int[] height) {
 
-        int left = 0,right = height.length-1,ans = 0;
-        while (left<right) {
-            int area = (right-left)*Math.min(height[left],height[right]);
-            ans = Math.max(ans,area);
-            if (height[left]<height[right]) {
+        int left = 0, right = height.length - 1, ans = 0;
+        while (left < right) {
+            int area = (right - left) * Math.min(height[left], height[right]);
+            ans = Math.max(ans, area);
+            if (height[left] < height[right]) {
                 left++;
-            }else {
+            } else {
                 right--;
             }
         }
 
+        return ans;
+    }
+
+    @Override
+    public List<List<Integer>> threeSum(int[] nums) {
+
+        Arrays.sort(nums);
+        List<List<Integer>> ans = new ArrayList<>();
+        for (int k = 0; k < nums.length - 2; k++) {
+            if (nums[k] > 0) break;
+            if (k > 0 && nums[k] == nums[k - 1]) continue;
+            int left = k + 1, right = nums.length - 1;
+            while (left < right) {
+                int sum = nums[k] + nums[left] + nums[right];
+                if (sum == 0) {
+                    ans.add(Arrays.asList(nums[k], nums[left], nums[right]));
+                    right--;
+                    do left++;
+                    while (left < right && nums[left] == nums[left - 1]);
+                } else if (sum > 0) {
+                    right--;
+                } else {
+                    left++;
+                }
+            }
+        }
         return ans;
     }
 }
