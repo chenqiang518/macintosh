@@ -188,4 +188,31 @@ public class SolutionImpl implements Solution {
         }
         return ans;
     }
+
+    @Override
+    public int trap(int[] height) {
+        // 左&右指针：分别指向左右两边界的列
+        int left = 0, right = height.length - 1, ans = 0;
+        // 左指针的左边最大高度、右指针的右边最大高度
+        int leftMax = height[left], rightMax = height[right];
+        while (left < right) {
+            leftMax = Math.max(leftMax, height[left]);
+            rightMax = Math.max(rightMax, height[right]);
+
+            if ( leftMax < rightMax) {
+                // 左指针的leftMax比右指针的rightMax矮
+                // 说明：左指针的右边至少有一个板子 > 左指针左边所有板子
+                // 根据水桶效应，保证了左指针当前列的水量决定权在左边
+                // 那么可以计算左指针当前列的水量：左边最大高度-当前列高度
+                ans += leftMax - height[left];
+                left++;
+            }else {
+                // 右边同理
+                ans += rightMax - height[right];
+                right--;
+            }
+
+        }
+        return ans;
+    }
 }
