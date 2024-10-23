@@ -215,4 +215,40 @@ public class SolutionImpl implements Solution {
         }
         return ans;
     }
+
+    @Override
+    public int lengthOfLongestSubstring(String s) {
+        /*
+        总体思路:
+        遍历字符串，每次以 i 值记录，不回溯 i 值，用flag记录遍历过程找到的重复的字符的位置。
+        如果遇到重复字符，i-flag 即为子串长度，此时flag重新定位到子串中重复字符的位置，
+        i 继续往后遍历。这里length跟result记录长度。
+         */
+        int i = 0,flag = 0,length = 0,result = 0;
+        while (i < s.length()) {
+            //从flag的位置开始算索引值，然后存放在pos中
+            int pos = s.indexOf(s.charAt(i),flag);
+            //如果pos小于i，等价于发现了重复字符
+            if (pos < i) {
+                //flag要移动到重复字符的后一位
+                flag = pos + 1;
+                //最大长度result
+                if (length > result) {
+                    result = length;
+                }
+                //如果result最大长度已经大于等于剩余字符的长度了  那么就返回result
+                if (result >= s.length() - pos - 1) {
+                    return result;
+                }
+                //i-pos就是长度 但是因为下面length++了  所以减去1
+                length = i - pos - 1;
+            }
+            //长度+1
+            length++;
+            //字符向后移一个
+            i++;
+        }
+        //最大长度length，必须要满足子串在右侧
+        return length;
+    }
 }
