@@ -4,8 +4,6 @@ import com.jayway.jsonpath.DocumentContext;
 import com.vernon.poppy.PoppyApplication;
 import com.vernon.poppy.dto.AccessTokenDTO;
 import com.vernon.poppy.dto.DepartmentDTO;
-import com.vernon.poppy.entity.WechatAccessToken;
-import com.vernon.poppy.service.impl.WechatDepartmentImpl;
 import com.vernon.poppy.service.source.QYWeChatSource;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
@@ -32,23 +30,21 @@ class WechatDepartmentTest {
     @Autowired
     WechatDepartmentService wechatDepartment;
 
-    @Autowired
-    WechatAccessTokenService wechatAccessToken;
-
-    private WechatAccessToken accessToken;
-
     @BeforeEach
     void setUp() {
-        wechatDepartment = new WechatDepartmentImpl();
+
+        //wechatDepartment = new WechatDepartmentImpl();
         AccessTokenDTO accessTokenDTO = QYWeChatSource.getAccessToken().collect(Collectors.toList()).get(0);
-        accessToken = wechatAccessToken.getRefreshToken(accessTokenDTO);
+        wechatDepartment.refreshWechatToken(accessTokenDTO);
+        wechatDepartment.addWechatFilter();
+        //accessToken = wechatAccessToken.getRefreshToken(accessTokenDTO);
     }
 
     @ParameterizedTest
     @MethodSource("com.vernon.poppy.service.source.QYWeChatSource#departmentTest")
     @Order(1)
     void createDepartmentTest(DepartmentDTO departmentDTO) {
-        DocumentContext department = wechatDepartment.createDepartment(departmentDTO, accessToken.getAccessToken());
+        DocumentContext department = wechatDepartment.createDepartment(departmentDTO);
 
         int errcode = department.read("$.errcode");
         String errmsg = department.read("$.errmsg");
@@ -68,7 +64,7 @@ class WechatDepartmentTest {
     @MethodSource("com.vernon.poppy.service.source.QYWeChatSource#departmentTest")
     @Order(2)
     void getSimpleListTest(DepartmentDTO departmentDTO) {
-        DocumentContext simpleList = wechatDepartment.getSimpleList(departmentDTO, accessToken.getAccessToken());
+        DocumentContext simpleList = wechatDepartment.getSimpleList(departmentDTO);
         int errcode = simpleList.read("$.errcode");
         String errmsg = simpleList.read("$.errmsg");
         List<Integer> ids = simpleList.read("$..id");
@@ -89,7 +85,7 @@ class WechatDepartmentTest {
     @Order(3)
     void delDepartmentTest(DepartmentDTO departmentDTO) {
 
-        DocumentContext delete = wechatDepartment.delDepartment(departmentDTO, accessToken.getAccessToken());
+        DocumentContext delete = wechatDepartment.delDepartment(departmentDTO);
         int errcode = delete.read("$.errcode");
         String errmsg = delete.read("$.errmsg");
 
@@ -98,7 +94,7 @@ class WechatDepartmentTest {
                 () -> assertThat(errmsg,equalTo("deleted"))
         );
 
-        DocumentContext getContext = wechatDepartment.getSimpleList(departmentDTO, accessToken.getAccessToken());
+        DocumentContext getContext = wechatDepartment.getSimpleList(departmentDTO);
 
         List<Integer> partyId = getContext.read("$..id");
 

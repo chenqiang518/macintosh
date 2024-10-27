@@ -1,0 +1,13 @@
+
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "ok",
+    "department_id": [
+        {
+            "id": 1,
+            "parentid": 0,
+            "order": 100000000
+        }
+    ]
+}

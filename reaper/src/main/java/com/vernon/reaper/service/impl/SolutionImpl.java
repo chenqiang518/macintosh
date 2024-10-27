@@ -199,14 +199,14 @@ public class SolutionImpl implements Solution {
             leftMax = Math.max(leftMax, height[left]);
             rightMax = Math.max(rightMax, height[right]);
 
-            if ( leftMax < rightMax) {
+            if (leftMax < rightMax) {
                 // 左指针的leftMax比右指针的rightMax矮
                 // 说明：左指针的右边至少有一个板子 > 左指针左边所有板子
                 // 根据水桶效应，保证了左指针当前列的水量决定权在左边
                 // 那么可以计算左指针当前列的水量：左边最大高度-当前列高度
                 ans += leftMax - height[left];
                 left++;
-            }else {
+            } else {
                 // 右边同理
                 ans += rightMax - height[right];
                 right--;
@@ -224,18 +224,16 @@ public class SolutionImpl implements Solution {
         如果遇到重复字符，i-flag 即为子串长度，此时flag重新定位到子串中重复字符的位置，
         i 继续往后遍历。这里length跟result记录长度。
          */
-        int i = 0,flag = 0,length = 0,result = 0;
+        int i = 0, flag = 0, length = 0, result = 0;
         while (i < s.length()) {
             //从flag的位置开始算索引值，然后存放在pos中
-            int pos = s.indexOf(s.charAt(i),flag);
+            int pos = s.indexOf(s.charAt(i), flag);
             //如果pos小于i，等价于发现了重复字符
             if (pos < i) {
                 //flag要移动到重复字符的后一位
                 flag = pos + 1;
                 //最大长度result
-                if (length > result) {
-                    result = length;
-                }
+                result = Math.max(result, length);
                 //如果result最大长度已经大于等于剩余字符的长度了  那么就返回result
                 if (result >= s.length() - pos - 1) {
                     return result;
@@ -250,5 +248,10 @@ public class SolutionImpl implements Solution {
         }
         //最大长度length，必须要满足子串在右侧
         return length;
+    }
+
+    @Override
+    public List<Integer> findAnagrams(String s, String p) {
+        return List.of();
     }
 }

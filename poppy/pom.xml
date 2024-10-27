@@ -65,10 +65,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-        </dependency>
+            <version>1.18.8</version>
+        </dependency>-->
 
         <!--3.0.0-->
         <dependency>
@@ -306,6 +307,12 @@
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>
                             <version>${org.mapstruct.version}</version>
+                        </path>
+                        <!-- 解决 maven 编译时无法识别 lombok 插件 -->
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.8</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>

@@ -9,7 +9,8 @@ import com.vernon.poppy.util.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RestController("/user")
+@RestController
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -30,8 +31,11 @@ public class UserController {
 
 
     @GetMapping(value = "/find", produces = "application/json")
-    R findUser(@RequestParam HogwartsTestUser hogwartsTestUser){
+    R findUser(@RequestParam String userName,@RequestParam String password){
 
+        HogwartsTestUser hogwartsTestUser = new HogwartsTestUser();
+        hogwartsTestUser.setUserName(userName);
+        hogwartsTestUser.setPassword(password);
         return user2.find(hogwartsTestUser);
     }
 

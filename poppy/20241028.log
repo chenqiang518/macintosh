@@ -1,0 +1,325 @@
+2024-10-28 00:06:09 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarting(55) : Starting WechatDepartmentTest using Java 11.0.24 on chenqiangdeMacBook-Pro.local with PID 10664 (started by chenqiang in /Users/chenqiang/develop/macintosh/poppy)
+2024-10-28 00:06:09 [main] DEBUG c.v.p.service.WechatDepartmentTest.logStarting(56) : Running with Spring Boot v2.6.6, Spring v5.3.18
+2024-10-28 00:06:09 [main] INFO  c.v.p.service.WechatDepartmentTest.logStartupProfileInfo(640) : No active profile set, falling back to 1 default profile: "default"
+2024-10-28 00:06:10 [main] WARN  o.m.s.mapper.ClassPathMapperScanner.warn(44) : No MyBatis mapper was found in '[com.vernon.poppy]' package. Please check your configuration.
+2024-10-28 00:06:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2024-10-28 00:06:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2024-10-28 00:06:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2024-10-28 00:06:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeEntityHelperCache(83) : Clear EntityHelper entityTableMap cache.
+2024-10-28 00:06:11 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:06:11 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:06:11 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:06:11 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:06:11 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarted(61) : Started WechatDepartmentTest in 2.43 seconds (JVM running for 3.535)
+2024-10-28 00:06:11 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 00:06:11 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 00:06:11 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 00:10:17 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarting(55) : Starting WechatDepartmentTest using Java 11.0.24 on chenqiangdeMacBook-Pro.local with PID 10697 (started by chenqiang in /Users/chenqiang/develop/macintosh/poppy)
+2024-10-28 00:10:17 [main] DEBUG c.v.p.service.WechatDepartmentTest.logStarting(56) : Running with Spring Boot v2.6.6, Spring v5.3.18
+2024-10-28 00:10:17 [main] INFO  c.v.p.service.WechatDepartmentTest.logStartupProfileInfo(640) : No active profile set, falling back to 1 default profile: "default"
+2024-10-28 00:10:17 [main] WARN  o.m.s.mapper.ClassPathMapperScanner.warn(44) : No MyBatis mapper was found in '[com.vernon.poppy]' package. Please check your configuration.
+2024-10-28 00:10:18 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2024-10-28 00:10:18 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2024-10-28 00:10:18 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2024-10-28 00:10:18 [main] INFO  t.m.m.a.MapperCacheDisabler.removeEntityHelperCache(83) : Clear EntityHelper entityTableMap cache.
+2024-10-28 00:10:19 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:10:19 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:10:19 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:10:19 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:10:19 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarted(61) : Started WechatDepartmentTest in 2.683 seconds (JVM running for 3.81)
+2024-10-28 00:10:19 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 00:10:19 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 00:10:19 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 00:57:51 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarting(55) : Starting WechatDepartmentTest using Java 11.0.24 on chenqiangdeMacBook-Pro.local with PID 10873 (started by chenqiang in /Users/chenqiang/develop/macintosh/poppy)
+2024-10-28 00:57:51 [main] DEBUG c.v.p.service.WechatDepartmentTest.logStarting(56) : Running with Spring Boot v2.6.6, Spring v5.3.18
+2024-10-28 00:57:51 [main] INFO  c.v.p.service.WechatDepartmentTest.logStartupProfileInfo(640) : No active profile set, falling back to 1 default profile: "default"
+2024-10-28 00:57:52 [main] WARN  o.m.s.mapper.ClassPathMapperScanner.warn(44) : No MyBatis mapper was found in '[com.vernon.poppy]' package. Please check your configuration.
+2024-10-28 00:57:53 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2024-10-28 00:57:53 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2024-10-28 00:57:53 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2024-10-28 00:57:53 [main] INFO  t.m.m.a.MapperCacheDisabler.removeEntityHelperCache(83) : Clear EntityHelper entityTableMap cache.
+2024-10-28 00:57:54 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:57:54 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:57:54 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:57:54 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 00:57:54 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarted(61) : Started WechatDepartmentTest in 2.79 seconds (JVM running for 4.063)
+2024-10-28 00:58:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 00:58:13 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 00:58:13 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:00:11 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run(788) : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m45s414ms).
+2024-10-28 01:01:59 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run(788) : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s457ms).
+2024-10-28 01:02:16 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarting(55) : Starting WechatDepartmentTest using Java 11.0.24 on chenqiangdeMacBook-Pro.local with PID 10892 (started by chenqiang in /Users/chenqiang/develop/macintosh/poppy)
+2024-10-28 01:02:16 [main] DEBUG c.v.p.service.WechatDepartmentTest.logStarting(56) : Running with Spring Boot v2.6.6, Spring v5.3.18
+2024-10-28 01:02:16 [main] INFO  c.v.p.service.WechatDepartmentTest.logStartupProfileInfo(640) : No active profile set, falling back to 1 default profile: "default"
+2024-10-28 01:02:17 [main] WARN  o.m.s.mapper.ClassPathMapperScanner.warn(44) : No MyBatis mapper was found in '[com.vernon.poppy]' package. Please check your configuration.
+2024-10-28 01:02:18 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2024-10-28 01:02:18 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2024-10-28 01:02:18 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2024-10-28 01:02:18 [main] INFO  t.m.m.a.MapperCacheDisabler.removeEntityHelperCache(83) : Clear EntityHelper entityTableMap cache.
+2024-10-28 01:02:18 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:02:18 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:02:18 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:02:18 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:02:18 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarted(61) : Started WechatDepartmentTest in 2.601 seconds (JVM running for 3.758)
+2024-10-28 01:02:25 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 01:02:26 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 01:02:26 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:04:59 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run(788) : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m9s879ms).
+2024-10-28 01:06:08 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarting(55) : Starting WechatDepartmentTest using Java 11.0.24 on chenqiangdeMacBook-Pro.local with PID 10921 (started by chenqiang in /Users/chenqiang/develop/macintosh/poppy)
+2024-10-28 01:06:08 [main] DEBUG c.v.p.service.WechatDepartmentTest.logStarting(56) : Running with Spring Boot v2.6.6, Spring v5.3.18
+2024-10-28 01:06:08 [main] INFO  c.v.p.service.WechatDepartmentTest.logStartupProfileInfo(640) : No active profile set, falling back to 1 default profile: "default"
+2024-10-28 01:06:09 [main] WARN  o.m.s.mapper.ClassPathMapperScanner.warn(44) : No MyBatis mapper was found in '[com.vernon.poppy]' package. Please check your configuration.
+2024-10-28 01:06:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2024-10-28 01:06:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2024-10-28 01:06:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2024-10-28 01:06:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeEntityHelperCache(83) : Clear EntityHelper entityTableMap cache.
+2024-10-28 01:06:10 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:06:11 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:06:11 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:06:11 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:06:11 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarted(61) : Started WechatDepartmentTest in 2.362 seconds (JVM running for 3.476)
+2024-10-28 01:06:11 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 01:06:11 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 01:06:11 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:06:12 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: POST https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ
+ Request Body: {"name":"VERNON_975100_部门自动化测试","name_en":"VERNON_975100","parentid":1,"order":1,"id":975100}
+2024-10-28 01:06:12 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "created",
+    "id": 975100
+}
+2024-10-28 01:06:12 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: GET https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ&id=1
+ Request Body: null
+2024-10-28 01:06:12 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "ok",
+    "department_id": [
+        {
+            "id": 1,
+            "parentid": 0,
+            "order": 100000000
+        },
+        {
+            "id": 975100,
+            "parentid": 1,
+            "order": 1
+        }
+    ]
+}
+2024-10-28 01:06:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 01:06:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 01:06:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:06:12 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: GET https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ&id=1
+ Request Body: null
+2024-10-28 01:06:12 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "ok",
+    "department_id": [
+        {
+            "id": 1,
+            "parentid": 0,
+            "order": 100000000
+        },
+        {
+            "id": 975100,
+            "parentid": 1,
+            "order": 1
+        }
+    ]
+}
+2024-10-28 01:06:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 01:06:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 01:06:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:06:13 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: GET https://qyapi.weixin.qq.com/cgi-bin/department/delete?id=975100&access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ
+ Request Body: null
+2024-10-28 01:06:13 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "deleted"
+}
+2024-10-28 01:06:13 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: GET https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ&id=1
+ Request Body: null
+2024-10-28 01:06:13 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "ok",
+    "department_id": [
+        {
+            "id": 1,
+            "parentid": 0,
+            "order": 100000000
+        }
+    ]
+}
+2024-10-28 01:08:08 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarting(55) : Starting WechatDepartmentTest using Java 11.0.24 on chenqiangdeMacBook-Pro.local with PID 10939 (started by chenqiang in /Users/chenqiang/develop/macintosh/poppy)
+2024-10-28 01:08:08 [main] DEBUG c.v.p.service.WechatDepartmentTest.logStarting(56) : Running with Spring Boot v2.6.6, Spring v5.3.18
+2024-10-28 01:08:08 [main] INFO  c.v.p.service.WechatDepartmentTest.logStartupProfileInfo(640) : No active profile set, falling back to 1 default profile: "default"
+2024-10-28 01:08:09 [main] WARN  o.m.s.mapper.ClassPathMapperScanner.warn(44) : No MyBatis mapper was found in '[com.vernon.poppy]' package. Please check your configuration.
+2024-10-28 01:08:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2024-10-28 01:08:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2024-10-28 01:08:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2024-10-28 01:08:10 [main] INFO  t.m.m.a.MapperCacheDisabler.removeEntityHelperCache(83) : Clear EntityHelper entityTableMap cache.
+2024-10-28 01:08:11 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:08:11 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:08:11 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:08:11 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:08:11 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarted(61) : Started WechatDepartmentTest in 2.375 seconds (JVM running for 3.44)
+2024-10-28 01:08:11 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 01:08:11 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 01:08:11 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:08:12 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: POST https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ
+ Request Body: {"name":"VERNON_745472_部门自动化测试","name_en":"VERNON_745472","parentid":1,"order":1,"id":745472}
+2024-10-28 01:08:12 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "created",
+    "id": 745472
+}
+2024-10-28 01:08:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 01:08:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 01:08:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:08:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 01:08:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 01:08:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:09:10 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarting(55) : Starting WechatDepartmentTest using Java 11.0.24 on chenqiangdeMacBook-Pro.local with PID 10957 (started by chenqiang in /Users/chenqiang/develop/macintosh/poppy)
+2024-10-28 01:09:10 [main] DEBUG c.v.p.service.WechatDepartmentTest.logStarting(56) : Running with Spring Boot v2.6.6, Spring v5.3.18
+2024-10-28 01:09:10 [main] INFO  c.v.p.service.WechatDepartmentTest.logStartupProfileInfo(640) : No active profile set, falling back to 1 default profile: "default"
+2024-10-28 01:09:10 [main] WARN  o.m.s.mapper.ClassPathMapperScanner.warn(44) : No MyBatis mapper was found in '[com.vernon.poppy]' package. Please check your configuration.
+2024-10-28 01:09:11 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2024-10-28 01:09:11 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2024-10-28 01:09:11 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2024-10-28 01:09:11 [main] INFO  t.m.m.a.MapperCacheDisabler.removeEntityHelperCache(83) : Clear EntityHelper entityTableMap cache.
+2024-10-28 01:09:12 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:09:12 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:09:12 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:09:12 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:09:12 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarted(61) : Started WechatDepartmentTest in 2.383 seconds (JVM running for 3.48)
+2024-10-28 01:09:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 01:09:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 01:09:12 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:09:13 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: GET https://qyapi.weixin.qq.com/cgi-bin/department/delete?id=745472&access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ
+ Request Body: null
+2024-10-28 01:09:13 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "deleted"
+}
+2024-10-28 01:09:13 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: GET https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ&id=1
+ Request Body: null
+2024-10-28 01:09:13 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "ok",
+    "department_id": [
+        {
+            "id": 1,
+            "parentid": 0,
+            "order": 100000000
+        }
+    ]
+}
+2024-10-28 01:10:12 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarting(55) : Starting WechatDepartmentTest using Java 11.0.24 on chenqiangdeMacBook-Pro.local with PID 10970 (started by chenqiang in /Users/chenqiang/develop/macintosh/poppy)
+2024-10-28 01:10:12 [main] DEBUG c.v.p.service.WechatDepartmentTest.logStarting(56) : Running with Spring Boot v2.6.6, Spring v5.3.18
+2024-10-28 01:10:12 [main] INFO  c.v.p.service.WechatDepartmentTest.logStartupProfileInfo(640) : No active profile set, falling back to 1 default profile: "default"
+2024-10-28 01:10:13 [main] WARN  o.m.s.mapper.ClassPathMapperScanner.warn(44) : No MyBatis mapper was found in '[com.vernon.poppy]' package. Please check your configuration.
+2024-10-28 01:10:14 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2024-10-28 01:10:14 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2024-10-28 01:10:14 [main] INFO  t.m.m.a.MapperCacheDisabler.removeStaticCache(60) : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2024-10-28 01:10:14 [main] INFO  t.m.m.a.MapperCacheDisabler.removeEntityHelperCache(83) : Clear EntityHelper entityTableMap cache.
+2024-10-28 01:10:14 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:10:14 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:10:14 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:10:14 [main] WARN  s.d.s.r.o.OperationImplicitParameterReader.modelSpecification(170) : Unable to interpret the implicit parameter configuration with dataType: , dataTypeClass: class java.lang.Void
+2024-10-28 01:10:14 [main] INFO  c.v.p.service.WechatDepartmentTest.logStarted(61) : Started WechatDepartmentTest in 2.406 seconds (JVM running for 3.508)
+2024-10-28 01:10:14 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 01:10:14 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 01:10:14 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:10:16 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: POST https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ
+ Request Body: {"name":"VERNON_356684_部门自动化测试","name_en":"VERNON_356684","parentid":1,"order":1,"id":356684}
+2024-10-28 01:10:16 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "created",
+    "id": 356684
+}
+2024-10-28 01:10:16 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: GET https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ&id=1
+ Request Body: null
+2024-10-28 01:10:16 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "ok",
+    "department_id": [
+        {
+            "id": 1,
+            "parentid": 0,
+            "order": 100000000
+        },
+        {
+            "id": 356684,
+            "parentid": 1,
+            "order": 1
+        }
+    ]
+}
+2024-10-28 01:10:16 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 01:10:16 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 01:10:16 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:10:16 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: GET https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ&id=1
+ Request Body: null
+2024-10-28 01:10:16 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "ok",
+    "department_id": [
+        {
+            "id": 1,
+            "parentid": 0,
+            "order": 100000000
+        },
+        {
+            "id": 356684,
+            "parentid": 1,
+            "order": 1
+        }
+    ]
+}
+2024-10-28 01:10:16 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==>  Preparing: SELECT id,corp_id,corp_secret,deleted,access_token,expires_in,create_time,update_time FROM wechat_access_token WHERE ( ( corp_id = ? and corp_secret = ? ) ) 
+2024-10-28 01:10:16 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : ==> Parameters: wwf69470c1623ad868(String), sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4(String)
+2024-10-28 01:10:16 [main] DEBUG c.v.p.d.W.selectByExample.debug(143) : <==      Total: 1
+2024-10-28 01:10:16 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: GET https://qyapi.weixin.qq.com/cgi-bin/department/delete?id=356684&access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ
+ Request Body: null
+2024-10-28 01:10:16 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "deleted"
+}
+2024-10-28 01:10:17 [main] DEBUG com.vernon.commonFilter(46) : 接口请求: GET https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ&id=1
+ Request Body: null
+2024-10-28 01:10:17 [main] DEBUG com.vernon.commonFilter(47) : 接口响应: 
+ Response Status: 200 HTTP/1.1 200 OK
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "ok",
+    "department_id": [
+        {
+            "id": 1,
+            "parentid": 0,
+            "order": 100000000
+        }
+    ]
+}

@@ -6,6 +6,7 @@ import com.vernon.poppy.converter.WechatAccessTokenConverter;
 import com.vernon.poppy.dao.WechatAccessTokenMapper;
 import com.vernon.poppy.dto.AccessTokenDTO;
 import com.vernon.poppy.entity.WechatAccessToken;
+import com.vernon.poppy.filter.WechatFilter;
 import com.vernon.poppy.service.WechatAccessTokenService;
 import io.restassured.response.Response;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,16 +89,6 @@ public class WechatAccessTokenImpl implements WechatAccessTokenService {
             }
         }
     return wechatAccessToken;
-    }
-
-
-    public static void main(String[] args) {
-        AccessTokenDTO accessTokenDTO = AccessTokenDTO.getInstance();
-        accessTokenDTO.setCorpid("wwf69470c1623ad868");
-        accessTokenDTO.setCorpsecret("sn0VAZ4wxM0ELk0PYXgbS1QUpVXtTLnTd1N_ib5wTO4");
-        WechatAccessTokenService wechatAccessTokenService = new WechatAccessTokenImpl();
-        WechatAccessToken refreshToken = wechatAccessTokenService.getRefreshToken(accessTokenDTO);
-        System.out.println(refreshToken.getAccessToken());
     }
 
 }

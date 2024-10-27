@@ -13,9 +13,10 @@ import static com.vernon.poppy.constant.WechatConstant.*;
 import static io.restassured.RestAssured.given;
 
 @Service
-public class WechatDepartmentImpl implements WechatDepartmentService {
+public class WechatDepartmentImpl extends WechatDepartmentService {
+
     @Override
-    public DocumentContext createDepartment(DepartmentDTO departmentDTO, String accessToken) {
+    public DocumentContext createDepartment(DepartmentDTO departmentDTO) {
 
         JSONObject create = new JSONObject() {{
             put("name", departmentDTO.getName());
@@ -25,51 +26,48 @@ public class WechatDepartmentImpl implements WechatDepartmentService {
             put("id", departmentDTO.getId());
         }};
         Response response = given()
-                    .log().all()
+                    .filter(filter)
                     .contentType(ContentType.JSON)
                     .body(create.toString())
-                    .queryParam("access_token", accessToken)
+                    .queryParam("access_token", this.getToken())
                 .when()
-                    .post(WECHAT_REMOTE + CREATE_URI)
+                    .post(CREATE_URI)
                 .then()
-                    .log().all()
                     .statusCode(200)
                     .extract().response();
         return JsonPath.parse(response.getBody().asString());
     }
 
     @Override
-    public DocumentContext getSimpleList(DepartmentDTO departmentDTO, String accessToken) {
+    public DocumentContext getSimpleList(DepartmentDTO departmentDTO) {
         JSONObject params=new JSONObject(){{
-            put("access_token", accessToken);
+            put("access_token", token);
             put("id", departmentDTO.getParentId());
         }};
         Response response = given()
-                    .log().all()
+                    .filter(filter)
                     .queryParams(params)
                 .when()
-                    .get(WECHAT_REMOTE + SIMPLE_LIST_URI)
+                    .get(SIMPLE_LIST_URI)
                 .then()
-                    .log().all()
                     .statusCode(200)
                     .extract().response();
         return JsonPath.parse(response.getBody().asString());
     }
 
     @Override
-    public DocumentContext delDepartment(DepartmentDTO departmentDTO, String accessToken) {
+    public DocumentContext delDepartment(DepartmentDTO departmentDTO) {
         JSONObject params = new JSONObject() {{
             put("id", departmentDTO.getId());
-            put("access_token", accessToken);
+            put("access_token", token);
         }};
 
         Response response = given()
-                    .log().all()
+                    .filter(filter)
                     .queryParams(params)
                 .when()
-                    .get(WECHAT_REMOTE + DELETE_URI)
+                    .get(DELETE_URI)
                 .then()
-                    .log().all()
                     .statusCode(200)
                     .extract().response();
         return JsonPath.parse(response.getBody().asString());

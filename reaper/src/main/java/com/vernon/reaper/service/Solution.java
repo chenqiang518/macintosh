@@ -71,7 +71,7 @@ public interface Solution {
      * 最长连续序列
      * 给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。
      * 请你设计并实现时间复杂度为 O(n) 的算法解决此问题。
-
+     * <p>
      * 示例 1：Å
      * 输入：nums = [100,4,200,1,3,2]
      * 输出：4
@@ -82,7 +82,8 @@ public interface Solution {
      */
     int longestConsecutive(int[] nums);
 
-    /** 移动零
+    /**
+     * 移动零
      * 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
      * 请注意 ，必须在不复制数组的情况下原地对数组进行操作。
      * 示例 1:
@@ -94,8 +95,9 @@ public interface Solution {
      */
     void moveZeroes(int[] nums);
 
-    /** 盛最多水的容器
-     *给定一个长度为 n 的整数数组 height 。有 n 条垂线，第 i 条线的两个端点是 (i, 0) 和 (i, height[i]) 。
+    /**
+     * 盛最多水的容器
+     * 给定一个长度为 n 的整数数组 height 。有 n 条垂线，第 i 条线的两个端点是 (i, 0) 和 (i, height[i]) 。
      * 找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
      * 返回容器可以储存的最大水量。
      * 说明：你不能倾斜容器。
@@ -109,7 +111,8 @@ public interface Solution {
      */
     int maxArea(int[] height);
 
-    /** 三数之和
+    /**
+     * 三数之和
      * 给你一个整数数组 nums ，判断是否存在三元组 [nums[i], nums[j], nums[k]] 满足 i != j、i != k 且 j != k ，
      * 同时还满足 nums[i] + nums[j] + nums[k] == 0 。请你返回所有和为 0 且不重复的三元组。
      * 注意：答案中不可以包含重复的三元组。
@@ -133,7 +136,8 @@ public interface Solution {
      */
     List<List<Integer>> threeSum(int[] nums);
 
-    /** 接雨水
+    /**
+     * 接雨水
      * 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
      * 示例 1：
      * 输入：height = [0,1,0,2,1,0,1,3,2,1,2,1]
@@ -142,7 +146,6 @@ public interface Solution {
      * 示例 2：
      * 输入：height = [4,2,0,3,2,5]
      * 输出：9
-     *
      */
     int trap(int[] height);
 
@@ -164,4 +167,23 @@ public interface Solution {
              请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
      */
     int lengthOfLongestSubstring(String s);
+
+    /*
+        找到字符串中所有字母异位词
+        给定两个字符串 s 和 p，找到 s 中所有 p 的 异位词的子串，返回这些子串的起始索引。不考虑答案输出的顺序。
+        示例 1:
+        输入: s = "cbaebabacd", p = "abc"
+        输出: [0,6]
+        解释:
+        起始索引等于 0 的子串是 "cba", 它是 "abc" 的异位词。
+        起始索引等于 6 的子串是 "bac", 它是 "abc" 的异位词。
+        示例 2:
+        输入: s = "abab", p = "ab"
+        输出: [0,1,2]
+        解释:
+        起始索引等于 0 的子串是 "ab", 它是 "ab" 的异位词。
+        起始索引等于 1 的子串是 "ba", 它是 "ab" 的异位词。
+        起始索引等于 2 的子串是 "ab", 它是 "ab" 的异位词。
+     */
+    List<Integer> findAnagrams(String s, String p);
 }
