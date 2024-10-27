@@ -2,11 +2,17 @@ package com.vernon.poppy.service;
 
 import com.jayway.jsonpath.DocumentContext;
 import com.vernon.poppy.dto.AccessTokenDTO;
-import com.vernon.poppy.entity.WechatAccessToken;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper = true)
+@Data
 public abstract class BaseWechatApiService extends BaseApiService {
 
-    public abstract void addWechatFilter();
+    public String accessToken;
+    public String role;
+
+    public abstract void addAuthorization(BaseWechatApiService baseWechatApiService);
 
     public abstract DocumentContext initWechatToken(AccessTokenDTO accessTokenDTO);
 

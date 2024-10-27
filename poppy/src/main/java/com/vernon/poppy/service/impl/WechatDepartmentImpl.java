@@ -12,9 +12,10 @@ import org.springframework.stereotype.Service;
 import static com.vernon.poppy.constant.WechatConstant.*;
 import static io.restassured.RestAssured.given;
 
-@Service
+@Service("wechatDepartmentService")
 public class WechatDepartmentImpl extends WechatDepartmentService {
 
+    // 创建部门
     @Override
     public DocumentContext createDepartment(DepartmentDTO departmentDTO) {
 
@@ -26,10 +27,10 @@ public class WechatDepartmentImpl extends WechatDepartmentService {
             put("id", departmentDTO.getId());
         }};
         Response response = given()
+                    // 添加公共部分过滤器
                     .filter(filter)
                     .contentType(ContentType.JSON)
                     .body(create.toString())
-                    .queryParam("access_token", this.getToken())
                 .when()
                     .post(CREATE_URI)
                 .then()
@@ -38,15 +39,13 @@ public class WechatDepartmentImpl extends WechatDepartmentService {
         return JsonPath.parse(response.getBody().asString());
     }
 
+    // 获取子部门ID列表
     @Override
     public DocumentContext getSimpleList(DepartmentDTO departmentDTO) {
-        JSONObject params=new JSONObject(){{
-            put("access_token", token);
-            put("id", departmentDTO.getParentId());
-        }};
         Response response = given()
+                    // 添加公共部分过滤器
                     .filter(filter)
-                    .queryParams(params)
+                    .queryParam("id",departmentDTO.getParentId())
                 .when()
                     .get(SIMPLE_LIST_URI)
                 .then()
@@ -55,16 +54,14 @@ public class WechatDepartmentImpl extends WechatDepartmentService {
         return JsonPath.parse(response.getBody().asString());
     }
 
+    // 删除部门
     @Override
     public DocumentContext delDepartment(DepartmentDTO departmentDTO) {
-        JSONObject params = new JSONObject() {{
-            put("id", departmentDTO.getId());
-            put("access_token", token);
-        }};
 
         Response response = given()
+                    // 添加公共部分过滤器
                     .filter(filter)
-                    .queryParams(params)
+                    .queryParam("id", departmentDTO.getId())
                 .when()
                     .get(DELETE_URI)
                 .then()

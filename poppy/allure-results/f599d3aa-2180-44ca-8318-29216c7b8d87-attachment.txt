@@ -1,0 +1,3 @@
+POST https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=cO4MWYi-St41Z5pm_aHo1j3lyKCXxIlefAbIcf1QD6p-gIcgVRUrF2X0HG_qCZzWuf2UZACll-szj2sATYglZXTRQLPPBEVdL54AN-HBrCsMa9HsVeNqrJWg2AKORoQOBurx3KUW_BAKTjLhwGSkEvPiLvT1y0ihqWmfhKN3bxwYmixOJKcPr8qFB2bru_k0THGrUrn1wEl7ItBXadsU8A
+ Request Body: 
+{"name":"VERNON_885466_部门自动化测试","name_en":"VERNON_885466","parentid":1,"order":1,"id":885466}

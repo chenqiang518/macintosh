@@ -1,0 +1,21 @@
+
+ Response Status: 200 HTTP/1.1 200 OK
+
+Accept=*/*
+access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ
+ Response Body: {
+    "errcode": 0,
+    "errmsg": "ok",
+    "department_id": [
+        {
+            "id": 1,
+            "parentid": 0,
+            "order": 100000000
+        },
+        {
+            "id": 715314,
+            "parentid": 1,
+            "order": 1
+        }
+    ]
+}

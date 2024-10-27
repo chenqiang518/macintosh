@@ -1,0 +1,3 @@
+GET https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?id=1&access_token=tK8F9VRhKHqJPFl8MMYUTJFw84j-x51YA_rrvrOAmZAED5o6kDNbngJRcWJ_pBjlG2CKPFGAmepZshQco4erz0iHm66fjL2p2RyEe_sc9EuRHQpEVpeQy6Pvl3mSTeSAnTSciOYzpDAcWz4adNw7ztGtUTow-v0JCOnTWOCN1nQlgoU2yWyOCy3_WdtuJiz5TjDl9ebD_lFMUZlPzVndrw
+ Request Body: 
+null

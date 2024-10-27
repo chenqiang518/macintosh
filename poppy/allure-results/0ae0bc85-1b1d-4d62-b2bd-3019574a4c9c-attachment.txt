@@ -1,0 +1,5 @@
+GET https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=cO4MWYi-St41Z5pm_aHo1j3lyKCXxIlefAbIcf1QD6p-gIcgVRUrF2X0HG_qCZzWuf2UZACll-szj2sATYglZXTRQLPPBEVdL54AN-HBrCsMa9HsVeNqrJWg2AKORoQOBurx3KUW_BAKTjLhwGSkEvPiLvT1y0ihqWmfhKN3bxwYmixOJKcPr8qFB2bru_k0THGrUrn1wEl7ItBXadsU8A&id=1
+ Cookies: 
+ Headers: Accept=*/*
+access_token=cO4MWYi-St41Z5pm_aHo1j3lyKCXxIlefAbIcf1QD6p-gIcgVRUrF2X0HG_qCZzWuf2UZACll-szj2sATYglZXTRQLPPBEVdL54AN-HBrCsMa9HsVeNqrJWg2AKORoQOBurx3KUW_BAKTjLhwGSkEvPiLvT1y0ihqWmfhKN3bxwYmixOJKcPr8qFB2bru_k0THGrUrn1wEl7ItBXadsU8A
+ Request Body: null

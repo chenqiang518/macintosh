@@ -21,7 +21,7 @@ import static com.vernon.poppy.constant.WechatConstant.GET_TOKEN_URI;
 import static com.vernon.poppy.constant.WechatConstant.WECHAT_REMOTE;
 import static io.restassured.RestAssured.given;
 
-@Service
+@Service("baseWechatApiService")
 public class BaseWechatApiImpl extends BaseWechatApiService {
 
     @Autowired
@@ -31,8 +31,9 @@ public class BaseWechatApiImpl extends BaseWechatApiService {
     WechatAccessTokenConverter wechatAccessTokenConverter;
 
     @Override
-    public void addWechatFilter() {
-        this.filter = new WechatFilter(this.getToken(),WECHAT_REMOTE);
+    public void addAuthorization(BaseWechatApiService baseWechatApiService) {
+        baseWechatApiService.baseUri = WECHAT_REMOTE;
+        this.filter = new WechatFilter(baseWechatApiService);
     }
 
     @Override
@@ -68,31 +69,30 @@ public class BaseWechatApiImpl extends BaseWechatApiService {
         if (tokens.isEmpty()) {
             wechatAccessToken =  wechatAccessTokenConverter.AccessTokenDTOFor(accessTokenDTO);
             DocumentContext context = initWechatToken(accessTokenDTO);
-            this.token = context.read("$.access_token");
+            this.accessToken = context.read("$.access_token");
             Integer expires = context.read("$.expires_in");
             Date expireIn = new Date(System.currentTimeMillis() + expires*1000);
 
-            wechatAccessToken.setAccessToken(this.token);
+            wechatAccessToken.setAccessToken(accessToken);
             wechatAccessToken.setDeleted((byte) 0);
             wechatAccessToken.setExpiresIn(expireIn);
             wechatAccessToken.setCreateTime(new Date());
             wechatAccessToken.setUpdateTime(new Date());
             wechatAccessTokenMapper.insert(wechatAccessToken);
-
         }else {
             wechatAccessToken =tokens.get(0);
             if (wechatAccessToken.getExpiresIn().before(new Date())){
                 DocumentContext context = initWechatToken(accessTokenDTO);
-                this.token = context.read("$.access_token");
+                this.accessToken = context.read("$.access_token");
                 Integer expires = context.read("$.expires_in");
                 Date expiresIn = new Date(System.currentTimeMillis() + expires*1000);
-                wechatAccessToken.setAccessToken(this.token);
+                wechatAccessToken.setAccessToken(accessToken);
                 wechatAccessToken.setExpiresIn(expiresIn);
                 wechatAccessToken.setUpdateTime(new Date());
                 wechatAccessTokenMapper.updateByPrimaryKey(wechatAccessToken);
-
+                return;
             }
-            this.token=wechatAccessToken.getAccessToken();
+            this.accessToken = wechatAccessToken.getAccessToken();
         }
 
     }
