@@ -16,6 +16,6 @@ public class BaseApiService {
     public Filter filter;
     @Getter
     @Setter
-    public String baseUri;
+    public String env;
 
 }

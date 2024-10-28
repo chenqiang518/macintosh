@@ -14,7 +14,15 @@ public class WechatBaseTest extends BaseTest {
 
     @BeforeAll
     void setUpAll() {
-        baseWechatApiService.setRole("admin");
+        // 多角色多权限鉴权，前置处理
+        this.role="admin";
+
+        Authorize(role);
+    }
+
+    private void Authorize(String role){
+        baseWechatApiService.setRole(role);
+        System.out.println( "role = " + role );
         AccessTokenDTO accessTokenDTO = QYWeChatSource.getAccessToken().collect(Collectors.toList()).get(0);
         baseWechatApiService.refreshWechatToken(accessTokenDTO);
     }

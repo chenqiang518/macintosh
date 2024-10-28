@@ -1,3 +1,0 @@
-POST https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token
- Request Body: 
-{"name":"VERNON_978935_部门自动化测试","name_en":"VERNON_978935","parentid":1,"order":1,"id":978935}

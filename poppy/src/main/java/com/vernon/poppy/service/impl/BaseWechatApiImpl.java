@@ -32,7 +32,6 @@ public class BaseWechatApiImpl extends BaseWechatApiService {
 
     @Override
     public void addAuthorization(BaseWechatApiService baseWechatApiService) {
-        baseWechatApiService.baseUri = WECHAT_REMOTE;
         this.filter = new WechatFilter(baseWechatApiService);
     }
 

@@ -5,8 +5,10 @@ import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 import com.vernon.poppy.dto.DepartmentDTO;
 import com.vernon.poppy.service.WechatDepartmentService;
+import com.vernon.poppy.util.MulitiResToJsonUtil;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import static com.vernon.poppy.constant.WechatConstant.*;
@@ -15,6 +17,8 @@ import static io.restassured.RestAssured.given;
 @Service("wechatDepartmentService")
 public class WechatDepartmentImpl extends WechatDepartmentService {
 
+    @Autowired
+    MulitiResToJsonUtil mulitiResToJsonUtil;
     // 创建部门
     @Override
     public DocumentContext createDepartment(DepartmentDTO departmentDTO) {
@@ -36,7 +40,8 @@ public class WechatDepartmentImpl extends WechatDepartmentService {
                 .then()
                     .statusCode(200)
                     .extract().response();
-        return JsonPath.parse(response.getBody().asString());
+        String jsonStr = mulitiResToJsonUtil.mulitiResToJson(response.getBody().asString());
+        return JsonPath.parse(jsonStr);
     }
 
     // 获取子部门ID列表
@@ -51,7 +56,8 @@ public class WechatDepartmentImpl extends WechatDepartmentService {
                 .then()
                     .statusCode(200)
                     .extract().response();
-        return JsonPath.parse(response.getBody().asString());
+        String jsonStr = mulitiResToJsonUtil.mulitiResToJson(response.getBody().asString());
+        return JsonPath.parse(jsonStr);
     }
 
     // 删除部门
@@ -67,6 +73,7 @@ public class WechatDepartmentImpl extends WechatDepartmentService {
                 .then()
                     .statusCode(200)
                     .extract().response();
-        return JsonPath.parse(response.getBody().asString());
+        String jsonStr = mulitiResToJsonUtil.mulitiResToJson(response.getBody().asString());
+        return JsonPath.parse(jsonStr);
     }
 }

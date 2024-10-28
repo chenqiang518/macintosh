@@ -21,6 +21,7 @@ class WechatDepartmentTest extends WechatBaseTest {
 
     @BeforeAll
     void setUp() {
+        baseWechatApiService.setEnv("default");
         wechatDepartmentService.addAuthorization(baseWechatApiService);
     }
 

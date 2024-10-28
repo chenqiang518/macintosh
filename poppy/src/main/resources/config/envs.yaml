@@ -1,0 +1,3 @@
+default: https://qyapi.weixin.qq.com
+qyapi: https://qyapi.weixin.qq.com
+work: https://work.weixin.qq.com

@@ -12,4 +12,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @TestInstance(Lifecycle.PER_CLASS)
 public class BaseTest {
 
+    public String role;
+
 }

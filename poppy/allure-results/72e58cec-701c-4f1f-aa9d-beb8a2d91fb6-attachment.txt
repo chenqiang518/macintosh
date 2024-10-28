@@ -1,2 +1,0 @@
-GET https://qyapi.weixin.qq.com/cgi-bin/department/delete?id=745472&access_token=cZOuTqiYgpCN3530uPlL7df6wBL8go35jgzwyriU-i-boCnSsn53JN8_aRn5nQSuwIhm6Lo5ouEEhZv27opTlpfhJFmNUIipGOKBr9-L2LJTt_CQHnLfp_e1wZfoENO5KXYLjJEdjwuBS7mInIebiNJAWdATpyQgXCv8i7NG7r0RiDERsHYEQ7Z_9DcRfVZ6EFiNBDKRMC57RzIFFKkCbQ
- Request Body: null
