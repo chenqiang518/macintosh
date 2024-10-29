@@ -23,6 +23,7 @@ public class QYWeChatSource {
             this.setParentId(1);
             this.setOrder(1);
             this.setId(id);
+            this.setPathToSimpleList("schema/simple_list.json");
         }});
     }
 }

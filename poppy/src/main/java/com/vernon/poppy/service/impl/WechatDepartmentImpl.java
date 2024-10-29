@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import static com.vernon.poppy.constant.WechatConstant.*;
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 @Service("wechatDepartmentService")
 public class WechatDepartmentImpl extends WechatDepartmentService {
@@ -55,9 +56,10 @@ public class WechatDepartmentImpl extends WechatDepartmentService {
                     .get(SIMPLE_LIST_URI)
                 .then()
                     .statusCode(200)
+                    .assertThat()
+                    .body(matchesJsonSchemaInClasspath(departmentDTO.getPathToSimpleList()))
                     .extract().response();
-        String jsonStr = mulitiResToJsonUtil.mulitiResToJson(response.getBody().asString());
-        return JsonPath.parse(jsonStr);
+        return JsonPath.parse(response.getBody().asString());
     }
 
     // 删除部门

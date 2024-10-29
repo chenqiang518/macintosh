@@ -144,7 +144,12 @@
             <groupId>io.rest-assured</groupId>
             <artifactId>json-schema-validator</artifactId>
             <version>4.4.0</version>
-            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.networknt</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>1.0.51</version>
         </dependency>
 
         <!-- slf4j 日志依赖信息 -->

@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome",
+  "definitions": {
+    "Welcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "errcode": {
+          "type": "integer"
+        },
+        "errmsg": {
+          "type": "string"
+        },
+        "department_id": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DepartmentID"
+          }
+        }
+      },
+      "required": [
+        "department_id",
+        "errcode",
+        "errmsg"
+      ],
+      "title": "Welcome"
+    },
+    "DepartmentID": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "parentid": {
+          "type": "integer"
+        },
+        "order": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "order",
+        "parentid"
+      ],
+      "title": "DepartmentID"
+    }
+  }
+}

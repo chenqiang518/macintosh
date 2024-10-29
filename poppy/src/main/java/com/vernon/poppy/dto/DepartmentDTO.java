@@ -10,6 +10,7 @@ public class DepartmentDTO {
     private int parentId;
     private int order;
     private int id;
+    private String pathToSimpleList;
 
     public DepartmentDTO() {}
 
@@ -21,6 +22,7 @@ public class DepartmentDTO {
                 ", parentId=" + parentId +
                 ", order=" + order +
                 ", id=" + id +
+                ", pathToSimpleList='" + pathToSimpleList + '\'' +
                 '}';
     }
 }

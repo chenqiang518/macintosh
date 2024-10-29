@@ -5,6 +5,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -120,7 +121,7 @@ public class FileUtil {
         InputStreamReader isr = null;
         BufferedReader bufferedReader = null;
         try {
-            isr = new InputStreamReader(inputStream, "utf-8");
+            isr = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
             bufferedReader = new BufferedReader(isr);
             StringBuilder builder = new StringBuilder();
             String string;
